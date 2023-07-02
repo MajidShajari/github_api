@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "github-api"
+version = "0.1.0"
+description = "Api For Github Readme File"
+authors = ["Majid Shajari <majidpy89@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "github_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.99.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
