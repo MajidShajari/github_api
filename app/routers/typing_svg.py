@@ -9,4 +9,9 @@ router = APIRouter(prefix="/typingsvg", tags=["Typing SVG"])
 
 @router.get("/")
 async def root(request: Request):
-    return templates.TemplateResponse("/demo/index.html", {"request": request})
+    query_dict = dict(request.query_params)
+    if query_dict:
+        if "lines" not in query_dict:
+            return {"error": "lines not exist"}
+        return {"message": request.query_params}
+    return templates.TemplateResponse("/typing_svg/demo.html", {"request": request})
