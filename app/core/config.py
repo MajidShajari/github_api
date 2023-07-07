@@ -4,6 +4,7 @@ class Settings:
     BASE_DIR: str = "app"
     TEMPLETE_DIRECTORY: str = BASE_DIR + "/templates"
     STATIC_DIRECTORY: str = BASE_DIR + "/static"
+    ORIGINS = ["*"]
 
 
 settings = Settings()

@@ -9,10 +9,10 @@ let preview = {
         center: 'false',
         vCenter: 'false',
         multiline: 'false',
-        width: '400',
+        width: '435',
         height: '50',
         duration: '5000',
-        pause: '0',
+        pause: '1000',
         repeat: 'true',
         separator: ';',
     },
@@ -75,8 +75,8 @@ let preview = {
             .join('&'); // join lines with '&' delimiter
         // generate links and markdown
         const imageURL = `${window.location.origin}${window.location.pathname}?${query}`;
-        const demoImageURL = `/?${query}`;
-        console.log('demoImageURL');
+        console.log(query);
+        const demoImageURL = `/typingsvg/?${query}`;
         const repoLink = 'https://github.com/MajidShajari';
         const md = `[![Typing SVG](${imageURL})](${repoLink})`;
         const html = `<a href="${repoLink}"><img src="${imageURL}" alt="Typing SVG" /></a>`;
