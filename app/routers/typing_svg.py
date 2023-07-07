@@ -10,6 +10,7 @@ router = APIRouter(prefix="/typingsvg", tags=["Typing SVG"])
 @router.get("/")
 async def root(request: Request):
     query_dict = dict(request.query_params)
+    print(query_dict)
     if query_dict:
         if "lines" not in query_dict:
             return {"error": "lines not exist"}
