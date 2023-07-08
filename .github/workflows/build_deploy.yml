@@ -15,5 +15,5 @@ jobs:
                   username: ${{secrets.PROD_USERNAME}}
                   password: ${{secrets.PROD_PASSWORD}}
                   script: |
-                      cd github_api
+                      cd shijar_dev_api
                       git pull
