@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .core.config import settings
-from .routers.bot import bot
+from .routers.demo_bot import demo_bot
 from .routers.typingsvg import typing_svg
 
 app = FastAPI()
@@ -17,7 +17,7 @@ app.add_middleware(
 )
 app.mount("/static", StaticFiles(directory=settings.STATIC_DIRECTORY), name="static")
 app.include_router(typing_svg.router)
-app.include_router(bot.router)
+app.include_router(demo_bot.router)
 
 
 @app.get("/")
