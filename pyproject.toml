@@ -1,17 +1,16 @@
 [tool.poetry]
-name = "github-api"
+name = "shijar-dev-api"
 version = "0.1.0"
-description = "Api For Github Readme File"
+description = "Api Shijar.dev Domain"
 authors = ["Majid Shajari <majidpy89@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "github_api"}]
+packages = [{include = "shijar_dev_api"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 fastapi = {extras = ["all"], version = "^0.99.1"}
 requests = "^2.31.0"
-
 
 [build-system]
 requires = ["poetry-core"]
