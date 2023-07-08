@@ -15,5 +15,5 @@ jobs:
                   username: ${{secrets.PROD_USERNAME}}
                   password: ${{secrets.PROD_PASSWORD}}
                   script: |
-                      cd app/src
+                      cd github_api
                       git pull
