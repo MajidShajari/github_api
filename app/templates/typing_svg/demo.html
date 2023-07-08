@@ -15,7 +15,11 @@
         <script type="text/javascript" src="{{ url_for('static', path='typing_svg/js/toggle-dark.js') }}" defer></script>
         <script type="text/javascript" src="{{ url_for('static', path='typing_svg/js/jscolor.min.js') }}" defer></script>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <link rel="icon" type="image/png" href="{{ url_for('static', path='typing_svg/favicon.png') }}" />
+        <link rel="icon" type="image/png" href="{{ url_for('static', path='typing_svg/favicon') }}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', path='typing_svg/favicon/apple-touch-icon.png') }}" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', path='typing_svg/favicon/favicon-32x32.png') }}" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', path='typing_svg/favicon/favicon-16x16.png') }}" />
+        <link rel="manifest" href="{{ url_for('static', path='typing_svg/favicon/site.webmanifest') }}" />
     </head>
 
     <body>
