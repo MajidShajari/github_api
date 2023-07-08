@@ -10,7 +10,7 @@ class GoogleFontConverter:
     def fetch_font_css(font, weight, text):
         url = "https://fonts.googleapis.com/css2?"
         params = {
-            "family": font + ":wght@" + weight,
+            "family": font + ":wght@" + str(weight),
             "text": text,
             "display": "fallback",
         }

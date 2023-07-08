@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .core.config import settings
+from .routers.bot import bot
 from .routers.typingsvg import typing_svg
 
 app = FastAPI()
@@ -16,9 +17,9 @@ app.add_middleware(
 )
 app.mount("/static", StaticFiles(directory=settings.STATIC_DIRECTORY), name="static")
 app.include_router(typing_svg.router)
+app.include_router(bot.router)
 
 
-@app.post("/shijarbot")
-async def root(request: Request):
-    response = await request.json()
-    print(response["message"]["text"])
+@app.get("/")
+async def root():
+    return{"message":"GitHub Api"}
