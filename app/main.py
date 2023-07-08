@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
@@ -22,4 +22,4 @@ app.include_router(bot.router)
 
 @app.get("/")
 async def root():
-    return{"message":"GitHub Api"}
+    return {"message": "GitHub Api"}
